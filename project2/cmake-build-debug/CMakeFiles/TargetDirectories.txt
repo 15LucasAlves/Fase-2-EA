@@ -1,3 +1,0 @@
-C:/Users/lucas/Documents/UniTrabalhos/Fase-2-EA/project2/cmake-build-debug/CMakeFiles/project2.dir
-C:/Users/lucas/Documents/UniTrabalhos/Fase-2-EA/project2/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/lucas/Documents/UniTrabalhos/Fase-2-EA/project2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
