@@ -1,0 +1,47 @@
+\doxysection{Grafos.\+h}
+\hypertarget{_grafos_8h_source}{}\label{_grafos_8h_source}\mbox{\hyperlink{_grafos_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ lucas\ on\ 24/05/2024.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ Ficheiro\ com\ as\ definições\ e\ construtores\ das\ estruturas\ utilizadas\ na\ realização\ do\ trabalho.}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ Criamos\ um\ vertice\ para\ recriar\ a\ estrutura\ do\ grafo\ e\ apontamos\ para\ os\ proximos\ vertices\ possiveis.}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ A\ regra\ de\ coneção\ é\ apenas\ para\ a\ direita\ do\ ponto\ e\ para\ baixo.}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ Da\ mesma\ maneira\ utilizamos\ uma\ pilha\ para\ facilmente\ aceder\ a\ varios\ pontos\ do\ grafo}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ PROJECT\_2\_EA\_GRAFOS\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ PROJECT\_2\_EA\_GRAFOS\_H}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ Defenição\ de\ um\ vertice\ do\ grafo}}
+\DoxyCodeLine{00016\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structvertice}{vertice}}\ *\mbox{\hyperlink{_grafos_8h_a3489ab87cebde6571f0cb1c70899b8e0}{Vertice}};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ Construtor\ da\ estrutura\ de\ um\ vertice}}
+\DoxyCodeLine{00019\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structvertice}{vertice}}\{}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{comment}{//\ Apontar\ para\ os\ dois\ caminhos\ possiveis}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structpilha}{pilha}}\ *\mbox{\hyperlink{structvertice_ad72c1d9727aa0644b4d1e6cf172140e9}{direita}};\ \textcolor{comment}{//\ Aresta\ da\ Direita}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structpilha}{pilha}}\ *\mbox{\hyperlink{structvertice_ac16b4a46b997b7a474117fe918dc3898}{baixo}};\ \textcolor{comment}{//\ Aresta\ de\ Baixo}}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structvertice_a1df99df902f5f6e81ec3e21e9c07360e}{visited}};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{comment}{//\ Variaveis\ logicas}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structvertice_a83201786792501b53e667771949a8129}{valor}};}
+\DoxyCodeLine{00027\ \};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{comment}{//\ Defenição\ da\ pilha}}
+\DoxyCodeLine{00030\ \textcolor{keyword}{typedef}\ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structpilha}{pilha}}\ *\mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{comment}{//\ Construtor\ da\ estrutura\ da\ pilha}}
+\DoxyCodeLine{00033\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structpilha}{pilha}}\{}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{comment}{//\ Apontatar\ para\ a\ proxima\ instancia\ da\ pilha}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structpilha}{pilha}}\ *\mbox{\hyperlink{structpilha_afeb2abf4174dcc1fa8530c11ea6a1d2d}{proximo}};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{comment}{//\ Variaveis\ logicas}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structpilha_a7441ef0865bcb3db9b8064dd7375c1ea}{id}};\ \textcolor{comment}{//\ Posição\ na\ pilha}}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structvertice}{vertice}}\ *\mbox{\hyperlink{structpilha_ad5148e07cded5c18bfab1632bd4494dc}{Vertice}};\ \textcolor{comment}{//\ Armazenar\ um\ vertice\ do\ grafo\ nesta\ posição\ da\ pilha}}
+\DoxyCodeLine{00040\ \};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//PROJECT\_2\_EA\_GRAFOS\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,459 @@
+\doxysection{Grafos.\+c File Reference}
+\hypertarget{_grafos_8c}{}\label{_grafos_8c}\index{Grafos.c@{Grafos.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$limits.\+h$>$}\newline
+{\ttfamily \#include "{}Grafos.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}} \mbox{\hyperlink{_grafos_8c_a66a0e3a0a34fd90b266c01d7097837db}{push}} (\mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}} \mbox{\hyperlink{structpilha}{pilha}}, int id, int valor)
+\begin{DoxyCompactList}\small\item\em Função para adicionar um valor no topo da pilha. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}} \mbox{\hyperlink{_grafos_8c_a86d5ec6bf0da3152bcf08f5b9edd1799}{pop}} (\mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}} \mbox{\hyperlink{structpilha}{pilha}})
+\begin{DoxyCompactList}\small\item\em Função para remover o valor no topo da pilha. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}} \mbox{\hyperlink{_grafos_8c_afa0e077c5af95ca5d76a1909eb4ed7bf}{read\+And\+Load\+File}} (char \texorpdfstring{$\ast$}{*}file\+Name, \mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}} \mbox{\hyperlink{structpilha}{pilha}})
+\begin{DoxyCompactList}\small\item\em Função para ler e carregar o ficheiro. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_grafos_8c_a95b2ce3ef30ca99edb9ff5f803046433}{print\+Matriz}} (\mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}} \mbox{\hyperlink{structpilha}{pilha}})
+\begin{DoxyCompactList}\small\item\em Função para imprimir a matriz a partir da pilha. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_grafos_8c_aa5315723a9c76c2fddd7c5fa936a2cb2}{print\+Lista\+Adjacencia}} (\mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}} \mbox{\hyperlink{structpilha}{pilha}})
+\begin{DoxyCompactList}\small\item\em Função para imprimir a lista de adjacência. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_grafos_8c_a2e1b4e55ecab25d9993e1761b159ce7b}{trocar\+Valor}} (\mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}} \mbox{\hyperlink{structpilha}{pilha}}, int coluna, int linha, int novo\+Valor)
+\begin{DoxyCompactList}\small\item\em Função para trocar um valor específico da matriz. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_grafos_8c_a600dff0782b77030ead614ebf6b21eb8}{refazer\+Arestas}} (\mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}} \mbox{\hyperlink{structpilha}{pilha}})
+\begin{DoxyCompactList}\small\item\em Função para refazer as arestas através do id das instâncias da pilha. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}} \mbox{\hyperlink{_grafos_8c_a6818163f158a631dcfd2e99e499dd8f9}{push\+Linha}} (\mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}} \mbox{\hyperlink{structpilha}{pilha}}, int id)
+\begin{DoxyCompactList}\small\item\em Função para criar uma linha com novos valores. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}} \mbox{\hyperlink{_grafos_8c_afe5572f5ed09c2654ccf07e46915b795}{adicionar\+Linha}} (\mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}} \mbox{\hyperlink{structpilha}{pilha}}, int linha)
+\begin{DoxyCompactList}\small\item\em Função para adicionar uma linha à matriz. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}} \mbox{\hyperlink{_grafos_8c_a125a9436186c042f483d0ca331ed14ec}{remover\+Linha}} (\mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}} \mbox{\hyperlink{structpilha}{pilha}}, int linha, bool parar\+Recursao)
+\begin{DoxyCompactList}\small\item\em Função para remover uma linha da matriz. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}} \mbox{\hyperlink{_grafos_8c_ae5d1de101ad72527a16f692895caa164}{adicionar\+Coluna}} (\mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}} \mbox{\hyperlink{structpilha}{pilha}}, int coluna)
+\begin{DoxyCompactList}\small\item\em Função para adicionar uma coluna à matriz. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}} \mbox{\hyperlink{_grafos_8c_adb98eefeebddc00abe0801eb6ca662be}{remover\+Coluna}} (\mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}} \mbox{\hyperlink{structpilha}{pilha}}, int coluna)
+\begin{DoxyCompactList}\small\item\em Função para remover uma coluna da matriz. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_grafos_8c_a0b83de62595b3451e7b5869859b18c81}{dfs\+Soma\+Maxima}} (\mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}} \mbox{\hyperlink{structpilha}{pilha}}, int soma\+Atual, int \texorpdfstring{$\ast$}{*}soma\+Maxima, \mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}} caminho, \mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}} \texorpdfstring{$\ast$}{*}caminho\+Max)
+\begin{DoxyCompactList}\small\item\em Função para realizar uma busca em profundidade e encontrar a soma máxima. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_grafos_8c_a9ea643da1da5173bff8de11f809627a3}{encontra\+Soma\+Maxima}} (\mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}} \mbox{\hyperlink{structpilha}{pilha}})
+\begin{DoxyCompactList}\small\item\em Função para encontrar a soma máxima no grafo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_grafos_8c_a6b4bb876cfa20fac9f882cfcd998ee1e}{print\+Caminhos}} (\mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}caminho, int \texorpdfstring{$\ast$}{*}melhor\+Comprimento, int num\+Caminhos)
+\begin{DoxyCompactList}\small\item\em Função para dar print ao caminho da maior soma possivel através da pilha que contém o caminho certo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_grafos_8c_aab13c2a748726bbeb047e5d42d64cee9}{encontrar\+Caminhos}} (\mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}} atual, \mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}} caminho\mbox{[}$\,$\mbox{]}, int index, int soma\+Atual, \mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}melhor\+Caminho, int \texorpdfstring{$\ast$}{*}maior\+Soma, int \texorpdfstring{$\ast$}{*}melhor\+Comprimento, int \texorpdfstring{$\ast$}{*}quantidade\+De\+Melhor\+Caminhos)
+\begin{DoxyCompactList}\small\item\em Uso da recursão para encontrar os caminhos possíveis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_grafos_8c_a8e29c0baa1d172a6ff2ae2b3e9307070}{calcular\+Caminho}} (\mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}} \mbox{\hyperlink{structpilha}{pilha}})
+\begin{DoxyCompactList}\small\item\em Função para calcular a maior soma possivel e o caminho ou caminhos atravez das regras de ligação estabelecidas\+: \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_grafos_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\begin{DoxyCompactList}\small\item\em Função principal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{_grafos_8c_a633a2fa53cbf858c330288f0647aa545}{n\+Colunas}} = 0
+\item 
+int \mbox{\hyperlink{_grafos_8c_a5a4820b4ceba647649d975b2d3516494}{n\+Linhas}} = 0
+\item 
+\mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}} \mbox{\hyperlink{_grafos_8c_a2e7ea9a05ea015a512b81288aef21d81}{temp}} = NULL
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_grafos_8c_ae5d1de101ad72527a16f692895caa164}\label{_grafos_8c_ae5d1de101ad72527a16f692895caa164} 
+\index{Grafos.c@{Grafos.c}!adicionarColuna@{adicionarColuna}}
+\index{adicionarColuna@{adicionarColuna}!Grafos.c@{Grafos.c}}
+\doxysubsubsection{\texorpdfstring{adicionarColuna()}{adicionarColuna()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}} adicionar\+Coluna (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}}}]{pilha,  }\item[{int}]{coluna }\end{DoxyParamCaption})}
+
+
+
+Função para adicionar uma coluna à matriz. 
+
+Adiciona uma nova coluna à matriz na posição escolhida.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pilha} & ponteiro para a pilha. \\
+\hline
+{\em coluna} & coluna onde a nova coluna será adicionada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ponteiro para a pilha atualizada. 
+\end{DoxyReturn}
+\Hypertarget{_grafos_8c_afe5572f5ed09c2654ccf07e46915b795}\label{_grafos_8c_afe5572f5ed09c2654ccf07e46915b795} 
+\index{Grafos.c@{Grafos.c}!adicionarLinha@{adicionarLinha}}
+\index{adicionarLinha@{adicionarLinha}!Grafos.c@{Grafos.c}}
+\doxysubsubsection{\texorpdfstring{adicionarLinha()}{adicionarLinha()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}} adicionar\+Linha (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}}}]{pilha,  }\item[{int}]{linha }\end{DoxyParamCaption})}
+
+
+
+Função para adicionar uma linha à matriz. 
+
+Adiciona uma nova linha à matriz na posição escolhida pelo utilizador.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pilha} & ponteiro para a pilha. \\
+\hline
+{\em linha} & linha onde a nova linha será adicionada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ponteiro para a pilha atualizada. 
+\end{DoxyReturn}
+\Hypertarget{_grafos_8c_a8e29c0baa1d172a6ff2ae2b3e9307070}\label{_grafos_8c_a8e29c0baa1d172a6ff2ae2b3e9307070} 
+\index{Grafos.c@{Grafos.c}!calcularCaminho@{calcularCaminho}}
+\index{calcularCaminho@{calcularCaminho}!Grafos.c@{Grafos.c}}
+\doxysubsubsection{\texorpdfstring{calcularCaminho()}{calcularCaminho()}}
+{\footnotesize\ttfamily void calcular\+Caminho (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}}}]{pilha }\end{DoxyParamCaption})}
+
+
+
+Função para calcular a maior soma possivel e o caminho ou caminhos atravez das regras de ligação estabelecidas\+: 
+
+Os vertices apenas se podem ligar como demonstra a matriz para a sua direita e para baixo. Começando na posição (1,1) até a (l,c).
+
+
+\begin{DoxyParams}{Parameters}
+{\em pilha} & o stack inicial. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_grafos_8c_a0b83de62595b3451e7b5869859b18c81}\label{_grafos_8c_a0b83de62595b3451e7b5869859b18c81} 
+\index{Grafos.c@{Grafos.c}!dfsSomaMaxima@{dfsSomaMaxima}}
+\index{dfsSomaMaxima@{dfsSomaMaxima}!Grafos.c@{Grafos.c}}
+\doxysubsubsection{\texorpdfstring{dfsSomaMaxima()}{dfsSomaMaxima()}}
+{\footnotesize\ttfamily void dfs\+Soma\+Maxima (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}}}]{pilha,  }\item[{int}]{soma\+Atual,  }\item[{int \texorpdfstring{$\ast$}{*}}]{soma\+Maxima,  }\item[{\mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}}}]{caminho,  }\item[{\mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}} \texorpdfstring{$\ast$}{*}}]{caminho\+Max }\end{DoxyParamCaption})}
+
+
+
+Função para realizar uma busca em profundidade e encontrar a soma máxima. 
+
+Realiza uma DFS no grafo para encontrar o caminho que resulta na soma máxima.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pilha} & ponteiro para a pilha. \\
+\hline
+{\em soma\+Atual} & soma atual dos valores dos vértices visitados. \\
+\hline
+{\em soma\+Maxima} & ponteiro para a soma máxima encontrada. \\
+\hline
+{\em caminho} & ponteiro para o caminho atual. \\
+\hline
+{\em caminho\+Max} & ponteiro para o caminho máximo encontrado. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_grafos_8c_aab13c2a748726bbeb047e5d42d64cee9}\label{_grafos_8c_aab13c2a748726bbeb047e5d42d64cee9} 
+\index{Grafos.c@{Grafos.c}!encontrarCaminhos@{encontrarCaminhos}}
+\index{encontrarCaminhos@{encontrarCaminhos}!Grafos.c@{Grafos.c}}
+\doxysubsubsection{\texorpdfstring{encontrarCaminhos()}{encontrarCaminhos()}}
+{\footnotesize\ttfamily void encontrar\+Caminhos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}}}]{atual,  }\item[{\mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}}}]{caminho\mbox{[}$\,$\mbox{]},  }\item[{int}]{index,  }\item[{int}]{soma\+Atual,  }\item[{\mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{melhor\+Caminho,  }\item[{int \texorpdfstring{$\ast$}{*}}]{maior\+Soma,  }\item[{int \texorpdfstring{$\ast$}{*}}]{melhor\+Comprimento,  }\item[{int \texorpdfstring{$\ast$}{*}}]{quantidade\+De\+Melhor\+Caminhos }\end{DoxyParamCaption})}
+
+
+
+Uso da recursão para encontrar os caminhos possíveis. 
+
+Através do uso da recursão espalhar os caminhos como se fosse água para preencher todos os caminhos possiveis
+
+
+\begin{DoxyParams}{Parameters}
+{\em atual} & o stack atual. \\
+\hline
+{\em caminho} & array de stacks para dar store do caminho. \\
+\hline
+{\em index} & index no array de caminhos. \\
+\hline
+{\em soma\+Atual} & soma atual do caminho. \\
+\hline
+{\em melhor\+Caminho} & array para guardar o melhor caminho. \\
+\hline
+{\em maior\+Soma} & pointer para guardar a maior soma. \\
+\hline
+{\em melhor\+Comprimento} & array para guardar o comprimento do melhor caminho. \\
+\hline
+{\em quantidade\+De\+Melhor\+Caminhos} & pointer para guardar o número de melhores caminhos. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_grafos_8c_a9ea643da1da5173bff8de11f809627a3}\label{_grafos_8c_a9ea643da1da5173bff8de11f809627a3} 
+\index{Grafos.c@{Grafos.c}!encontraSomaMaxima@{encontraSomaMaxima}}
+\index{encontraSomaMaxima@{encontraSomaMaxima}!Grafos.c@{Grafos.c}}
+\doxysubsubsection{\texorpdfstring{encontraSomaMaxima()}{encontraSomaMaxima()}}
+{\footnotesize\ttfamily int encontra\+Soma\+Maxima (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}}}]{pilha }\end{DoxyParamCaption})}
+
+
+
+Função para encontrar a soma máxima no grafo. 
+
+Chama a função de DFS para encontrar o caminho com a soma máxima no grafo.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pilha} & ponteiro para a pilha. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a soma máxima encontrada. 
+\end{DoxyReturn}
+\Hypertarget{_grafos_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{_grafos_8c_a840291bc02cba5474a4cb46a9b9566fe} 
+\index{Grafos.c@{Grafos.c}!main@{main}}
+\index{main@{main}!Grafos.c@{Grafos.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Função principal. 
+
+Função principal do programa que permite escolher a matriz inicial e o loop do programa.
+
+\begin{DoxyReturn}{Returns}
+estado da execução do programa. 
+\end{DoxyReturn}
+\Hypertarget{_grafos_8c_a86d5ec6bf0da3152bcf08f5b9edd1799}\label{_grafos_8c_a86d5ec6bf0da3152bcf08f5b9edd1799} 
+\index{Grafos.c@{Grafos.c}!pop@{pop}}
+\index{pop@{pop}!Grafos.c@{Grafos.c}}
+\doxysubsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}} pop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}}}]{pilha }\end{DoxyParamCaption})}
+
+
+
+Função para remover o valor no topo da pilha. 
+
+Mandar para dentro da função a nossa pilha
+
+
+\begin{DoxyParams}{Parameters}
+{\em pilha} & pointer para o stack \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer para o stack atualizado 
+\end{DoxyReturn}
+\Hypertarget{_grafos_8c_a6b4bb876cfa20fac9f882cfcd998ee1e}\label{_grafos_8c_a6b4bb876cfa20fac9f882cfcd998ee1e} 
+\index{Grafos.c@{Grafos.c}!printCaminhos@{printCaminhos}}
+\index{printCaminhos@{printCaminhos}!Grafos.c@{Grafos.c}}
+\doxysubsubsection{\texorpdfstring{printCaminhos()}{printCaminhos()}}
+{\footnotesize\ttfamily void print\+Caminhos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{caminho,  }\item[{int \texorpdfstring{$\ast$}{*}}]{melhor\+Comprimento,  }\item[{int}]{num\+Caminhos }\end{DoxyParamCaption})}
+
+
+
+Função para dar print ao caminho da maior soma possivel através da pilha que contém o caminho certo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em caminho} & array bidimensional de stacks que contêm cominhos. \\
+\hline
+{\em melhor\+Comprimento} & array que contém o comprimento do melhor caminho. \\
+\hline
+{\em num\+Caminhos} & número de caminhos. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_grafos_8c_aa5315723a9c76c2fddd7c5fa936a2cb2}\label{_grafos_8c_aa5315723a9c76c2fddd7c5fa936a2cb2} 
+\index{Grafos.c@{Grafos.c}!printListaAdjacencia@{printListaAdjacencia}}
+\index{printListaAdjacencia@{printListaAdjacencia}!Grafos.c@{Grafos.c}}
+\doxysubsubsection{\texorpdfstring{printListaAdjacencia()}{printListaAdjacencia()}}
+{\footnotesize\ttfamily void print\+Lista\+Adjacencia (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}}}]{pilha }\end{DoxyParamCaption})}
+
+
+
+Função para imprimir a lista de adjacência. 
+
+Imprime a lista de adjacência representada pela pilha.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pilha} & ponteiro para a pilha. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_grafos_8c_a95b2ce3ef30ca99edb9ff5f803046433}\label{_grafos_8c_a95b2ce3ef30ca99edb9ff5f803046433} 
+\index{Grafos.c@{Grafos.c}!printMatriz@{printMatriz}}
+\index{printMatriz@{printMatriz}!Grafos.c@{Grafos.c}}
+\doxysubsubsection{\texorpdfstring{printMatriz()}{printMatriz()}}
+{\footnotesize\ttfamily void print\+Matriz (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}}}]{pilha }\end{DoxyParamCaption})}
+
+
+
+Função para imprimir a matriz a partir da pilha. 
+
+Imprime a matriz representada pela pilha.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pilha} & ponteiro para a pilha. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_grafos_8c_a66a0e3a0a34fd90b266c01d7097837db}\label{_grafos_8c_a66a0e3a0a34fd90b266c01d7097837db} 
+\index{Grafos.c@{Grafos.c}!push@{push}}
+\index{push@{push}!Grafos.c@{Grafos.c}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}} push (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}}}]{pilha,  }\item[{int}]{id,  }\item[{int}]{valor }\end{DoxyParamCaption})}
+
+
+
+Função para adicionar um valor no topo da pilha. 
+
+Mandar para dentro da função a nossa pilha, um id e um valor e adicionar o mesmo no topo da pilha
+
+
+\begin{DoxyParams}{Parameters}
+{\em pilha} & pointer para a pilha \\
+\hline
+{\em id} & id do vértice \\
+\hline
+{\em valor} & valor associado ao vértice \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+devolve pointer para a pilha atualizada 
+\end{DoxyReturn}
+\Hypertarget{_grafos_8c_a6818163f158a631dcfd2e99e499dd8f9}\label{_grafos_8c_a6818163f158a631dcfd2e99e499dd8f9} 
+\index{Grafos.c@{Grafos.c}!pushLinha@{pushLinha}}
+\index{pushLinha@{pushLinha}!Grafos.c@{Grafos.c}}
+\doxysubsubsection{\texorpdfstring{pushLinha()}{pushLinha()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}} push\+Linha (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}}}]{pilha,  }\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Função para criar uma linha com novos valores. 
+
+Cria uma nova linha com novos valores e adiciona ao topo da pilha.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pilha} & ponteiro para a pilha. \\
+\hline
+{\em id} & id na pilha. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ponteiro para a pilha atualizada. 
+\end{DoxyReturn}
+\Hypertarget{_grafos_8c_afa0e077c5af95ca5d76a1909eb4ed7bf}\label{_grafos_8c_afa0e077c5af95ca5d76a1909eb4ed7bf} 
+\index{Grafos.c@{Grafos.c}!readAndLoadFile@{readAndLoadFile}}
+\index{readAndLoadFile@{readAndLoadFile}!Grafos.c@{Grafos.c}}
+\doxysubsubsection{\texorpdfstring{readAndLoadFile()}{readAndLoadFile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}} read\+And\+Load\+File (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{file\+Name,  }\item[{\mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}}}]{pilha }\end{DoxyParamCaption})}
+
+
+
+Função para ler e carregar o ficheiro. 
+
+Lê os dados de um ficheiro e carrega as variáveis necessárias para a construção dos vértices e da lista.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & nome do ficheiro \\
+\hline
+{\em pilha} & ponteiro para a pilha \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ponteiro para a pilha atualizada. 
+\end{DoxyReturn}
+\Hypertarget{_grafos_8c_a600dff0782b77030ead614ebf6b21eb8}\label{_grafos_8c_a600dff0782b77030ead614ebf6b21eb8} 
+\index{Grafos.c@{Grafos.c}!refazerArestas@{refazerArestas}}
+\index{refazerArestas@{refazerArestas}!Grafos.c@{Grafos.c}}
+\doxysubsubsection{\texorpdfstring{refazerArestas()}{refazerArestas()}}
+{\footnotesize\ttfamily void refazer\+Arestas (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}}}]{pilha }\end{DoxyParamCaption})}
+
+
+
+Função para refazer as arestas através do id das instâncias da pilha. 
+
+Refaz as ligações das arestas na matriz de acordo com os ids, ou seja, posição na pilha.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pilha} & ponteiro para a pilha. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_grafos_8c_adb98eefeebddc00abe0801eb6ca662be}\label{_grafos_8c_adb98eefeebddc00abe0801eb6ca662be} 
+\index{Grafos.c@{Grafos.c}!removerColuna@{removerColuna}}
+\index{removerColuna@{removerColuna}!Grafos.c@{Grafos.c}}
+\doxysubsubsection{\texorpdfstring{removerColuna()}{removerColuna()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}} remover\+Coluna (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}}}]{pilha,  }\item[{int}]{coluna }\end{DoxyParamCaption})}
+
+
+
+Função para remover uma coluna da matriz. 
+
+Remove uma coluna da matriz na posição escolhida.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pilha} & ponteiro para a pilha. \\
+\hline
+{\em coluna} & coluna a ser removida. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ponteiro para a pilha atualizada. 
+\end{DoxyReturn}
+\Hypertarget{_grafos_8c_a125a9436186c042f483d0ca331ed14ec}\label{_grafos_8c_a125a9436186c042f483d0ca331ed14ec} 
+\index{Grafos.c@{Grafos.c}!removerLinha@{removerLinha}}
+\index{removerLinha@{removerLinha}!Grafos.c@{Grafos.c}}
+\doxysubsubsection{\texorpdfstring{removerLinha()}{removerLinha()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}} remover\+Linha (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}}}]{pilha,  }\item[{int}]{linha,  }\item[{bool}]{parar\+Recursao }\end{DoxyParamCaption})}
+
+
+
+Função para remover uma linha da matriz. 
+
+Remove uma linha, à escolha do utilizador, da matriz.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pilha} & ponteiro para a pilha. \\
+\hline
+{\em linha} & linha a ser removida. \\
+\hline
+{\em parar\+Recursao} & bool para parar a recursão. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ponteiro para a pilha atualizada. 
+\end{DoxyReturn}
+\Hypertarget{_grafos_8c_a2e1b4e55ecab25d9993e1761b159ce7b}\label{_grafos_8c_a2e1b4e55ecab25d9993e1761b159ce7b} 
+\index{Grafos.c@{Grafos.c}!trocarValor@{trocarValor}}
+\index{trocarValor@{trocarValor}!Grafos.c@{Grafos.c}}
+\doxysubsubsection{\texorpdfstring{trocarValor()}{trocarValor()}}
+{\footnotesize\ttfamily void trocar\+Valor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}}}]{pilha,  }\item[{int}]{coluna,  }\item[{int}]{linha,  }\item[{int}]{novo\+Valor }\end{DoxyParamCaption})}
+
+
+
+Função para trocar um valor específico da matriz. 
+
+Troca um valor numa posição especificada pelo utilizador da matriz.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pilha} & ponteiro para a pilha. \\
+\hline
+{\em coluna} & coluna da matriz. \\
+\hline
+{\em linha} & linha da matriz. \\
+\hline
+{\em novo\+Valor} & novo valor a ser atribuído à posição escolhida. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{_grafos_8c_a633a2fa53cbf858c330288f0647aa545}\label{_grafos_8c_a633a2fa53cbf858c330288f0647aa545} 
+\index{Grafos.c@{Grafos.c}!nColunas@{nColunas}}
+\index{nColunas@{nColunas}!Grafos.c@{Grafos.c}}
+\doxysubsubsection{\texorpdfstring{nColunas}{nColunas}}
+{\footnotesize\ttfamily int n\+Colunas = 0}
+
+número total de colunas da matriz gerada pelo programa \Hypertarget{_grafos_8c_a5a4820b4ceba647649d975b2d3516494}\label{_grafos_8c_a5a4820b4ceba647649d975b2d3516494} 
+\index{Grafos.c@{Grafos.c}!nLinhas@{nLinhas}}
+\index{nLinhas@{nLinhas}!Grafos.c@{Grafos.c}}
+\doxysubsubsection{\texorpdfstring{nLinhas}{nLinhas}}
+{\footnotesize\ttfamily int n\+Linhas = 0}
+
+número total de linhas da matriz gerada pelo programa \Hypertarget{_grafos_8c_a2e7ea9a05ea015a512b81288aef21d81}\label{_grafos_8c_a2e7ea9a05ea015a512b81288aef21d81} 
+\index{Grafos.c@{Grafos.c}!temp@{temp}}
+\index{temp@{temp}!Grafos.c@{Grafos.c}}
+\doxysubsubsection{\texorpdfstring{temp}{temp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_grafos_8h_a237263d9b919656341478f188fcf37a8}{Pilha}} temp = NULL}
+
+Criar pilha temp global para quando usar recursão não resetar o valor 

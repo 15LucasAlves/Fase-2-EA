@@ -1,0 +1,24 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     Grafos
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _push, symObjAddr: 0x0, symBinAddr: 0x100001CF0, symSize: 0x1A4 }
+  - { offsetInCU: 0x3F, offset: 0x3F, size: 0x8, addend: 0x0, symName: _nColunas, symObjAddr: 0x4D20, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offsetInCU: 0x5B, offset: 0x5B, size: 0x8, addend: 0x0, symName: _nLinhas, symObjAddr: 0x4D24, symBinAddr: 0x100008004, symSize: 0x0 }
+  - { offsetInCU: 0x7F, offset: 0x7F, size: 0x8, addend: 0x0, symName: _temp, symObjAddr: 0x4D28, symBinAddr: 0x100008008, symSize: 0x0 }
+  - { offsetInCU: 0x116, offset: 0x116, size: 0x8, addend: 0x0, symName: _push, symObjAddr: 0x0, symBinAddr: 0x100001CF0, symSize: 0x1A4 }
+  - { offsetInCU: 0x176, offset: 0x176, size: 0x8, addend: 0x0, symName: _pop, symObjAddr: 0x1A4, symBinAddr: 0x100001E94, symSize: 0x6C }
+  - { offsetInCU: 0x1AC, offset: 0x1AC, size: 0x8, addend: 0x0, symName: _readAndLoadFile, symObjAddr: 0x210, symBinAddr: 0x100001F00, symSize: 0x228 }
+  - { offsetInCU: 0x24A, offset: 0x24A, size: 0x8, addend: 0x0, symName: _printMatriz, symObjAddr: 0x438, symBinAddr: 0x100002128, symSize: 0xA0 }
+  - { offsetInCU: 0x26E, offset: 0x26E, size: 0x8, addend: 0x0, symName: _printListaAdjacencia, symObjAddr: 0x4D8, symBinAddr: 0x1000021C8, symSize: 0x11C }
+  - { offsetInCU: 0x292, offset: 0x292, size: 0x8, addend: 0x0, symName: _trocarValor, symObjAddr: 0x5F4, symBinAddr: 0x1000022E4, symSize: 0xA8 }
+  - { offsetInCU: 0x2E0, offset: 0x2E0, size: 0x8, addend: 0x0, symName: _refazerArestas, symObjAddr: 0x69C, symBinAddr: 0x10000238C, symSize: 0x19C }
+  - { offsetInCU: 0x320, offset: 0x320, size: 0x8, addend: 0x0, symName: _pushLinha, symObjAddr: 0x838, symBinAddr: 0x100002528, symSize: 0xB4 }
+  - { offsetInCU: 0x385, offset: 0x385, size: 0x8, addend: 0x0, symName: _adicionarLinha, symObjAddr: 0x8EC, symBinAddr: 0x1000025DC, symSize: 0x1D0 }
+  - { offsetInCU: 0x3DC, offset: 0x3DC, size: 0x8, addend: 0x0, symName: _removerLinha, symObjAddr: 0xABC, symBinAddr: 0x1000027AC, symSize: 0x274 }
+  - { offsetInCU: 0x424, offset: 0x424, size: 0x8, addend: 0x0, symName: _adicionarColuna, symObjAddr: 0xD30, symBinAddr: 0x100002A20, symSize: 0x250 }
+  - { offsetInCU: 0x4A8, offset: 0x4A8, size: 0x8, addend: 0x0, symName: _removerColuna, symObjAddr: 0xF80, symBinAddr: 0x100002C70, symSize: 0x2B0 }
+  - { offsetInCU: 0x50E, offset: 0x50E, size: 0x8, addend: 0x0, symName: _dfsSomaMaxima, symObjAddr: 0x1230, symBinAddr: 0x100002F20, symSize: 0x288 }
+  - { offsetInCU: 0x5E5, offset: 0x5E5, size: 0x8, addend: 0x0, symName: _encontraSomaMaxima, symObjAddr: 0x14B8, symBinAddr: 0x1000031A8, symSize: 0x110 }
+  - { offsetInCU: 0x65A, offset: 0x65A, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x15C8, symBinAddr: 0x1000032B8, symSize: 0x660 }
+...

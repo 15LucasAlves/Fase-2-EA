@@ -8,7 +8,6 @@
 //
 // Da mesma maneira utilizamos uma pilha para facilmente aceder a varios pontos do grafo
 //
-
 #ifndef PROJECT_2_EA_GRAFOS_H
 #define PROJECT_2_EA_GRAFOS_H
 #include <stdlib.h>
@@ -21,11 +20,11 @@ struct vertice{
     // Apontar para os dois caminhos possiveis
     struct pilha *direita; // Aresta da Direita
     struct pilha *baixo; // Aresta de Baixo
+    bool visited;
 
     // Variaveis logicas
     int valor;
 };
-
 
 // Defenição da pilha
 typedef  struct pilha *Pilha;

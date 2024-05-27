@@ -1,22 +1,30 @@
-//
 // Created by lucas on 24/05/2024.
-//
-// Ficheiro principal que contem a maioria das funções relacionadas com a construção do grafo
-//
+/**
+ * @file main.c
+ * @brief Ficheiro principal que contem a maioria das funções relacionadas com a construção do grafo
+ */
 
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
+#include <limits.h>
 #include "Grafos.h"
 
 // Variaveis globais
-int nColunas = 0; // numero total de colunas da matriz gerada pelo programa
-int nLinhas = 0; // numero total de linhas da matriz gerada pelo programa
+int nColunas = 0; /**<número total de colunas da matriz gerada pelo programa */
+int nLinhas = 0; /**<número total de linhas da matriz gerada pelo programa */
 
 
-
-// Função para adiconar um valor no topo da pilha
-// Mandar para dentro fa função a nossa pilha, um id e um valor
+/**
+ * @brief Função para adicionar um valor no topo da pilha
+ *
+ * Mandar para dentro da função a nossa pilha, um id e um valor e adicionar o mesmo no topo da pilha
+ *
+ * @param pilha pointer para a pilha
+ * @param id id do vértice
+ * @param valor valor associado ao vértice
+ * @return devolve pointer para a pilha atualizada
+ */
 Pilha push(Pilha pilha, int id, int valor){
 
     // Alocar espaço para a nova instancia na pilha e do vertice
@@ -59,9 +67,14 @@ Pilha push(Pilha pilha, int id, int valor){
 }
 
 
-
-// Função para remover o valor no topo da pilha
-// Mandar para dentro da função a nossa pilha
+/**
+ * @brief Função para remover o valor no topo da pilha
+ *
+ * Mandar para dentro da função a nossa pilha
+ *
+ * @param pilha pointer para o stack
+ * @return pointer para o stack atualizado
+ */
 Pilha pop(Pilha pilha){
 
     // Criar uma instancia temporaria da pilha
@@ -81,9 +94,15 @@ Pilha pop(Pilha pilha){
     }
 }
 
-
-
-// Função para a leitura do ficheiro e carregamento das variaveis necessarias para a contrução dos vertices e da lista
+/**
+ * @brief Função para ler e carregar o ficheiro.
+ *
+ * Lê os dados de um ficheiro e carrega as variáveis necessárias para a construção dos vértices e da lista.
+ *
+ * @param fileName nome do ficheiro
+ * @param pilha ponteiro para a pilha
+ * @return ponteiro para a pilha atualizada.
+ */
 Pilha readAndLoadFile(char *fileName, Pilha pilha){
 
     // Abir o ficheiro em read mode
@@ -146,8 +165,13 @@ Pilha readAndLoadFile(char *fileName, Pilha pilha){
 }
 
 
-
-// Função para imprimir a matriz a partir da pilha
+/**
+ * @brief Função para imprimir a matriz a partir da pilha.
+ *
+ * Imprime a matriz representada pela pilha.
+ *
+ * @param pilha ponteiro para a pilha.
+ */
 void printMatriz(Pilha pilha){
 
     if(pilha != NULL){
@@ -165,8 +189,13 @@ void printMatriz(Pilha pilha){
     }
 }
 
-
-
+/**
+ * @brief Função para imprimir a lista de adjacência.
+ *
+ * Imprime a lista de adjacência representada pela pilha.
+ *
+ * @param pilha ponteiro para a pilha.
+ */
 void printListaAdjacencia(Pilha pilha){
     if(pilha != NULL){
 
@@ -196,8 +225,16 @@ void printListaAdjacencia(Pilha pilha){
 }
 
 
-
-// Função para trocar um valor especifico da matriz
+/**
+ * @brief Função para trocar um valor específico da matriz.
+ *
+ * Troca um valor numa posição especificada pelo utilizador da matriz.
+ *
+ * @param pilha ponteiro para a pilha.
+ * @param coluna coluna da matriz.
+ * @param linha linha da matriz.
+ * @param novoValor novo valor a ser atribuído à posição escolhida.
+ */
 void trocarValor(Pilha pilha, int coluna, int linha, int novoValor){
     if(pilha != NULL){
 
@@ -216,8 +253,14 @@ void trocarValor(Pilha pilha, int coluna, int linha, int novoValor){
 }
 
 
+/**
+ * @brief Função para refazer as arestas através do id das instâncias da pilha.
+ *
+ * Refaz as ligações das arestas na matriz de acordo com os ids, ou seja, posição na pilha.
+ *
+ * @param pilha ponteiro para a pilha.
+ */
 
-// Função para refazer as arestas atravez do id das instancias da pilha
 void refazerArestas(Pilha pilha){
     Pilha tempFirst = pilha;
     Pilha tempSecond = pilha;
@@ -254,8 +297,16 @@ void refazerArestas(Pilha pilha){
 }
 
 
+/**
+ * @brief Função para criar uma linha com novos valores.
+ *
+ * Cria uma nova linha com novos valores e adiciona ao topo da pilha.
+ *
+ * @param pilha ponteiro para a pilha.
+ * @param id id na pilha.
+ * @return ponteiro para a pilha atualizada.
+ */
 
-// Função para criar uma linha com novos valores
 Pilha pushLinha(Pilha pilha, int id){
     int novoValor = 0;
 
@@ -268,8 +319,16 @@ Pilha pushLinha(Pilha pilha, int id){
 }
 
 
+/**
+ * @brief Função para adicionar uma linha à matriz.
+ *
+ * Adiciona uma nova linha à matriz na posição escolhida pelo utilizador.
+ *
+ * @param pilha ponteiro para a pilha.
+ * @param linha linha onde a nova linha será adicionada.
+ * @return ponteiro para a pilha atualizada.
+ */
 
-// Função para adicionar uma linha á matriz
 Pilha adicionarLinha(Pilha pilha, int linha) {
     // Criar uma pilha para retornar o topo
     Pilha returnTopPilha = pilha;
@@ -318,10 +377,19 @@ Pilha adicionarLinha(Pilha pilha, int linha) {
 }
 
 
+Pilha temp = NULL; /**<Criar pilha temp global para quando usar recursão não resetar o valor*/
 
-// Criar pilha temp global para quando usar recursão não resetar o valor
-Pilha temp = NULL;
-// Função de remoção de linha
+/**
+ * @brief Função para remover uma linha da matriz.
+ *
+ * Remove uma linha, à escolha do utilizador, da matriz.
+ *
+ * @param pilha ponteiro para a pilha.
+ * @param linha linha a ser removida.
+ * @param pararRecursao bool para parar a recursão.
+ * @return ponteiro para a pilha atualizada.
+ */
+
 Pilha removerLinha(Pilha pilha, int linha, bool pararRecursao){
 
     if(pilha != NULL){
@@ -378,9 +446,16 @@ Pilha removerLinha(Pilha pilha, int linha, bool pararRecursao){
     return pilha;
 }
 
+/**
+ * @brief Função para adicionar uma coluna à matriz.
+ *
+ * Adiciona uma nova coluna à matriz na posição escolhida.
+ *
+ * @param pilha ponteiro para a pilha.
+ * @param coluna coluna onde a nova coluna será adicionada.
+ * @return ponteiro para a pilha atualizada.
+ */
 
-
-// Função para adicionar uma coluna a matriz
 Pilha adicionarColuna(Pilha pilha, int coluna){
     // Criar uma pilha para retornar o topo
     Pilha returnTopPilha = pilha;
@@ -439,9 +514,16 @@ Pilha adicionarColuna(Pilha pilha, int coluna){
     return returnTopPilha;
 }
 
+/**
+ * @brief Função para remover uma coluna da matriz.
+ *
+ * Remove uma coluna da matriz na posição escolhida.
+ *
+ * @param pilha ponteiro para a pilha.
+ * @param coluna coluna a ser removida.
+ * @return ponteiro para a pilha atualizada.
+ */
 
-
-// Função para remoção de uma coluna
 Pilha removerColuna(Pilha pilha, int coluna){
     // Criar uma pilha para retornar o topo
     Pilha returnTopPilha = pilha;
@@ -517,14 +599,227 @@ Pilha removerColuna(Pilha pilha, int coluna){
     return returnTopPilha;
 }
 
+/**
+ * @brief Função para realizar uma busca em profundidade e encontrar a soma máxima.
+ *
+ * Realiza uma DFS no grafo para encontrar o caminho que resulta na soma máxima.
+ *
+ * @param pilha ponteiro para a pilha.
+ * @param somaAtual soma atual dos valores dos vértices visitados.
+ * @param somaMaxima ponteiro para a soma máxima encontrada.
+ * @param caminho ponteiro para o caminho atual.
+ * @param caminhoMax ponteiro para o caminho máximo encontrado.
+ */
 
+void dfsSomaMaxima(Pilha pilha, int somaAtual, int* somaMaxima, Pilha caminho, Pilha* caminhoMax){
+    // Se a pilha for nula, o vertice for nulo ou o vertice já tiver sido visitado saimos da função
+    if(pilha == NULL || pilha->Vertice == NULL || pilha->Vertice->visited){
+        return;
+    }
+    // Marca o vertice em que estamos como visitado
+    pilha->Vertice->visited = true;
+    // Passa o valor do vertice em que estamos e soma à soma atual
+    somaAtual += pilha->Vertice->valor;
 
-// Função principal têm a escolha da matriz inicial e o program loop
+    // Criamos um novo stack para dar store do caminho
+    // de cada vez que visitamos um novo vertice adicionamos ao topo do stack
+    // se andarmos para trás damos pop dos valores do stack
+    Pilha novoCaminho  = malloc(sizeof(*novoCaminho));
+    novoCaminho->Vertice = pilha->Vertice;
+    novoCaminho->proximo = caminho;
+    caminho = novoCaminho;
+
+    // Se o valor da soma atual for maior que o da soma maxima atribuir soma atual à máxima
+    if(somaAtual > *somaMaxima){
+        *somaMaxima = somaAtual;
+        // Enquanto o caminho maximo for diferente de null libertamos o caminhoMax
+        while(*caminhoMax != NULL) {
+            Pilha old = *caminhoMax;
+            *caminhoMax = (*caminhoMax)->proximo;
+            free(old);
+        }
+        // Copiamos o caminho a ser usado atualmente para o stack do caminho máximo
+        Pilha usado = caminho;
+        while(usado != NULL){
+            Pilha novo = malloc(sizeof(*novo));
+            novo->Vertice = usado->Vertice;
+            novo->proximo = *caminhoMax;
+            *caminhoMax = novo;
+            novo = novo->proximo;
+            usado = usado->proximo;
+        }
+    }
+    // Utiliza a recursividade para verificar todos os caminhos possiveis tendo em conta a
+    // a regra de conexão aplicada
+    if(pilha->Vertice->direita != NULL && !pilha->Vertice->direita->Vertice->visited) {
+        dfsSomaMaxima(pilha->Vertice->direita, somaAtual, somaMaxima, caminho, caminhoMax);
+    }
+    if(pilha->Vertice->baixo != NULL && !pilha->Vertice->baixo->Vertice->visited){
+        dfsSomaMaxima(pilha->Vertice->baixo, somaAtual, somaMaxima, caminho, caminhoMax);
+    }
+    // Quando damos backtrack removemos do stack
+    Pilha old = caminho;
+    caminho = caminho->proximo;
+    free(old);
+    // Marca como falso outra vez para que a recursividade funcione direito
+    pilha->Vertice->visited = false;
+}
+
+/**
+ * @brief Função para encontrar a soma máxima no grafo.
+ *
+ * Chama a função de DFS para encontrar o caminho com a soma máxima no grafo.
+ *
+ * @param pilha ponteiro para a pilha.
+ * @return a soma máxima encontrada.
+ */
+
+int encontraSomaMaxima(Pilha pilha){
+    // Inicia a soma maxima para o minimo possivel e a atual para 0
+    int somaMaxima = INT_MIN;
+    int somaAtual = 0;
+    Pilha caminho = NULL;
+    Pilha caminhoMax = NULL;
+    // Atravessa a pilha para chegar ao elemento inicial da matrix
+    while(pilha->proximo != NULL && pilha->id != 1){
+        pilha = pilha->proximo;
+    }
+    // Chama a função que aplica o dfs e depois retorna a soma máxima
+    dfsSomaMaxima(pilha, somaAtual, &somaMaxima, caminho, &caminhoMax);
+    printf("O caminho utilizado foi: ");
+    Pilha atual = caminhoMax;
+    while(atual != NULL) {
+        printf("%d ", atual->Vertice->valor);
+        atual = atual->proximo;
+    }
+    printf("\n");
+    return somaMaxima;
+}
+
+/**
+ * @brief Função para dar print ao caminho da maior soma possivel através da pilha que contém o caminho certo
+ *
+ * @param caminho array bidimensional de stacks que contêm cominhos.
+ * @param melhorComprimento array que contém o comprimento do melhor caminho.
+ * @param numCaminhos número de caminhos.
+ */
+
+void printCaminhos(Pilha **caminho, int *melhorComprimento, int numCaminhos){
+    for(int j = 0; j < numCaminhos; j++){
+        for(int i = 0; i < melhorComprimento[j]; i++){
+            printf("ID: %d VALOR[%d] ", caminho[j][i]->id, caminho[j][i]->Vertice->valor);
+        }
+        printf("\n");
+    }
+}
+
+/**
+ * @brief Uso da recursão para encontrar os caminhos possíveis.
+ *
+ * Através do uso da recursão espalhar os caminhos como se fosse água para preencher todos os caminhos possiveis
+ *
+ * @param atual o stack atual.
+ * @param caminho array de stacks para dar store do caminho.
+ * @param index index no array de caminhos.
+ * @param somaAtual soma atual do caminho.
+ * @param melhorCaminho array para guardar o melhor caminho.
+ * @param maiorSoma pointer para guardar a maior soma.
+ * @param melhorComprimento array para guardar o comprimento do melhor caminho.
+ * @param quantidadeDeMelhorCaminhos pointer para guardar o número de melhores caminhos.
+ */
+
+void encontrarCaminhos(Pilha atual, Pilha caminho[], int index, int somaAtual, Pilha **melhorCaminho, int *maiorSoma, int *melhorComprimento, int *quantidadeDeMelhorCaminhos){
+    caminho[index] = atual;
+    somaAtual += atual->Vertice->valor;
+
+    // Quando chegarmos ao final da matriz parar a recursividade (chegou à ultima instância do caminho)
+    if(atual->Vertice->direita == NULL && atual->Vertice->baixo == NULL){
+        // Verificar se algum dos caminhos têm uma maior soma
+        // Guardar os caminhos da maior soma
+        if(somaAtual > *maiorSoma){
+            *maiorSoma = somaAtual;
+            melhorComprimento[0] = index + 1;
+            *quantidadeDeMelhorCaminhos = 1;
+
+            for(int i = 0; i <= index; i++){
+                melhorCaminho[0][i] = caminho[i];
+            }
+        }
+            // Caso já exista um melhor caminho criar uma segunda instancia e guardar na matriz bidimensional
+        else if(somaAtual == *maiorSoma){
+            int pos = *quantidadeDeMelhorCaminhos;
+            melhorComprimento[pos] = index + 1;
+
+            for(int i = 0; i <= index; i++){
+                melhorCaminho[pos][i] = caminho[i];
+            }
+
+            (*quantidadeDeMelhorCaminhos)++;
+        }
+        return;
+    }
+
+    if(atual->Vertice->direita != NULL){
+        encontrarCaminhos(atual->Vertice->direita, caminho, index + 1 , somaAtual, melhorCaminho, maiorSoma, melhorComprimento, quantidadeDeMelhorCaminhos);
+    }
+
+    if(atual->Vertice->baixo != NULL){
+        encontrarCaminhos(atual->Vertice->baixo, caminho, index + 1 , somaAtual,melhorCaminho, maiorSoma, melhorComprimento, quantidadeDeMelhorCaminhos);
+    }
+}
+
+/**
+ * @brief Função para calcular a maior soma possivel e o caminho ou caminhos atravez das regras de ligação estabelecidas:
+ *
+ * Os vertices apenas se podem ligar como demonstra a matriz para a sua direita e para baixo.
+ * Começando na posição (1,1) até a (l,c).
+ *
+ * @param pilha o stack inicial.
+ */
+
+void calcularCaminho(Pilha pilha){
+    Pilha aux = pilha;
+    Pilha caminhos[nColunas * nLinhas];
+    int maiorSoma = 0;
+    int melhorComprimento[nColunas * nLinhas];
+    int quantidadeDeMelhorCaminhos = 0;
+
+    Pilha *melhorCaminho[nColunas * nLinhas];
+    for(int i = 0; i < nLinhas * nColunas; i++){
+        melhorCaminho[i] = (Pilha)malloc(nColunas * nLinhas * sizeof(Pilha));
+    }
+
+    if(aux != NULL){
+        // Ir até a ultima instancia da pilha (primeira posição da matriz)
+        while ( aux->id > 1 ){
+            aux = aux->proximo;
+        }
+
+        encontrarCaminhos(aux, caminhos, 0, 0, melhorCaminho, &maiorSoma, melhorComprimento, &quantidadeDeMelhorCaminhos);
+
+        printCaminhos(melhorCaminho, melhorComprimento, quantidadeDeMelhorCaminhos);
+        printf("Maior soma: %d\n", maiorSoma);
+    }
+
+    for(int i = 0; i < nColunas * nLinhas; i++){
+        free(melhorCaminho[i]);
+    }
+}
+
+/**
+ * @brief Função principal.
+ *
+ * Função principal do programa que permite escolher a matriz inicial e o loop do programa.
+ *
+ * @return estado da execução do programa.
+ */
+
 int main(void) {
     int escolha = 0;
     int coluna = 0;
     int linha = 0;
     int novoValor = 0;
+    int somaMaxima = 0;
     bool endProgram = false;
 
     // Criar uma instancia nulla da pilha para poder adicionar valores
@@ -570,7 +865,8 @@ int main(void) {
         printf("4. Adicionar uma coluna\n");
         printf("5. Remover uma coluna\n");
         printf("6. Listar os ids e todos adjacentes\n");
-        printf("7. Calcular o caminho com a maior soma\n");
+        printf("7. Calcular o caminho com a maior soma (DFS)\n");
+        printf("8. Calcular o caminho com a maior soma (BFS)\n");
         printf("0. Sair\n\n");
         printf("Insira a sua escolha: ");
         scanf("%d", &escolha);
@@ -669,9 +965,12 @@ int main(void) {
                 break;
 
             case 7:
-
+                somaMaxima = encontraSomaMaxima(pilha);
+                printf("Soma máxima: %d\n", somaMaxima);
                 break;
-
+            case 8:
+                calcularCaminho(pilha);
+                break;
             case 0:
                 endProgram = true;
                 break;
